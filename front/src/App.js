@@ -30,13 +30,13 @@ const App = () => {
         return date.toLocaleDateString('en-GB'); // Formatiraj datum u "dd/MM/yy"
       });
 
-      const chartTemperatureData = data.map((entry) => entry.main.temp+ Math.random()*2);
+      const chartTemperatureData = data.map((entry) => entry.temperature_celsius);
 
       setChartData({
         labels: chartLabels,
         datasets: [
           {
-            label: 'Temperatura',
+            label: 'Temperature in Celsius',
             data: chartTemperatureData,
             fill: false,
             borderColor: 'rgba(75,192,192,1)',
